@@ -53,4 +53,19 @@ For example, imagine we have an analog signal composed of frequencies between 0 
 
 Now imagine that the fastest our digitizer can sample is 6,000 Hz: what frequency range can we properly capture? Since we need a minimum of two samples per period for proper reconstruction, we can only signals that change with a frequency of 0 to a maximum of 3,000Hz. This 3,000Hz limit is called the **Nyquist limit**  it is  12  the sampling rate  fs .
 
-For many applications related to Human-Computer Interaction and Ubiquitous Computing, sampling at 4kHz is more than sufficient. This enables analysis of any signal between 0-2kHz. Human motion—ambulatory movement, limb motion, finger gestures, etc.—simply does not change that fast. Even electroencephalograms (EEG), which measure electrical activity in the brain, are often sampled at 500-1000Hz. However, for recording sound (humans can hear between 0-20kHz), faster sampling rates are necessary.
+For many applications related to Human-Computer Interaction and Ubiquitous Computing, sampling at 4kHz is more than sufficient. This enables analysis of any signal between 0-2kHz. Human motion ambulatory movement, limb motion, finger gestures are simply does not change that fast. Even electroencephalograms (EEG), which measure electrical activity in the brain, are often sampled at 500-1000Hz. However, for recording sound (humans can hear between 0-20kHz), faster sampling rates are necessary.
+
+ ## 4. Aliasing
+When we sample a signal with frequency components greater than the Nyquist limit. We get aliasing problem where the higher frequency components of a signal (those greater than the Nyquist limit) appear as lower frequency components
+
+### Experimenting with the Nyquist limit
+
+Now we experiment with the Nyquist limit and aliasing but this time with sound data. Sound is a bit harder to visualize than our synthetic signals above because it's very high frequency  but in the note book I  provide zoomed insets to help.
+
+We will also be using spectrogram visualizations to help us investigate the effect of lower sampling rates on the signal. A spectrogram plots the frequency components of our signal over time.
+
+1. **Sweep with sampling rate of 44,100 Hz**
+
+2. ** Same sweep but with a 11,025 Hz sampling rat**
+
+3. ** Same sweep but with a 882 Hz sampling rate** 
