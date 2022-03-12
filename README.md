@@ -66,6 +66,6 @@ We will also be using spectrogram visualizations to help us investigate the effe
 
 1. **Sweep with sampling rate of 44,100 Hz**
 
-2. ** Same sweep but with a 11,025 Hz sampling rat**
+2. **Same sweep but with a 11,025 Hz sampling rate**
 
-3. ** Same sweep but with a 882 Hz sampling rate** 
+3. **Same sweep but with a 882 Hz sampling rate** 
