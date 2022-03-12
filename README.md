@@ -44,3 +44,13 @@ In this project we work with pre-digitalized audio waveforms sampled at 44.1kHz 
 5. **2-bit quantization** - it has very very low quantization level
 
 
+ ## 3. Nyquist Sampling Theorem
+
+It is the most fundamental theorems in **signal processing**: the Nyquist Sampling Theorem, which states that a continuous signal can be reconstructed as long as there are two samples per period for the highest frequency component in the underlying signal.
+for a perfect reconstruction, our digital sampling frequency  fs  must be at least twice as fast as the fastest frequency in our continuous signal:  fs=2∗max(analogfreq) .
+
+For example, imagine we have an analog signal composed of frequencies between 0 and 2,000 Hz. To properly digitize this signal, we must sample at  2∗2,000Hz . So,  fs  needs to be 4,000Hz.
+
+Now imagine that the fastest our digitizer can sample is 6,000 Hz: what frequency range can we properly capture? Since we need a minimum of two samples per period for proper reconstruction, we can only signals that change with a frequency of 0 to a maximum of 3,000Hz. This 3,000Hz limit is called the **Nyquist limit**  it is  12  the sampling rate  fs .
+
+For many applications related to Human-Computer Interaction and Ubiquitous Computing, sampling at 4kHz is more than sufficient. This enables analysis of any signal between 0-2kHz. Human motion—ambulatory movement, limb motion, finger gestures, etc.—simply does not change that fast. Even electroencephalograms (EEG), which measure electrical activity in the brain, are often sampled at 500-1000Hz. However, for recording sound (humans can hear between 0-20kHz), faster sampling rates are necessary.
